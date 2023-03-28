@@ -13,11 +13,16 @@
       1500s, when an unknown printer took a galley of type and scrambled it to
       make a type specimen book.
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script>
-export default {}
+<script setup>
+const { data } = await useFetch('/api/ninja')
+// const { data } = await useFetch('/api/ninja?name=mario', {
+//   method: 'post',
+//   body: { age: 30 },
+// })
 </script>
 
 <style scoped>
